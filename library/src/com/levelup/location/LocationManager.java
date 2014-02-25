@@ -21,6 +21,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import android.annotation.TargetApi;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -56,7 +57,6 @@ import android.text.TextUtils;
  */
 public class LocationManager {
 
-	// TODO support getLastLocation() with reflection
 	// TODO support geofencing when available too
 	
 	private static LocationManager instance;
@@ -682,6 +682,32 @@ public class LocationManager {
      */
     public boolean isProviderEnabled(String provider) {
     	return delegate.isProviderEnabled(provider);
+    }
+    
+    /**
+     * Get the last known location.
+     *
+     * <p>This location could be very old so use
+     * {@link Location#getElapsedRealtimeNanos} to calculate its age. It can
+     * also return null if no previous location is available.
+     *
+     * <p>Always returns immediately.
+     *
+     * @return The last known location, or null if not available
+     * @throws SecurityException if no suitable permission is present
+     */
+    @TargetApi(17)
+    public Location getLastLocation() {
+		try {
+			Method requestLocation = delegate.getClass().getMethod("getLastLocation");
+			if (null!=requestLocation)
+				return (Location) requestLocation.invoke(delegate);
+		} catch (NoSuchMethodException e) {
+		} catch (IllegalAccessException e) {
+		} catch (IllegalArgumentException e) {
+		} catch (InvocationTargetException e) {
+		}
+		return null;
     }
     
 	/**
