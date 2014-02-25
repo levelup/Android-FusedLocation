@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FusedLocation Test</string>
+    <string name="loading">Loading...</string>
+    <string name="fused_supported">Found Fused</string>
+    <string name="fused_not_supported">Fused Not Supported</string>
+    <string name="from_gps">From GPS</string>
+    <string name="from_network">From Network</string>
+    <string name="from_fused">From Fused</string>
+
+</resources>
