@@ -58,6 +58,15 @@ public class MainActivity extends Activity implements LocationListener {
 		}
 	}
 
+	@Override
+	protected void onDestroy() {
+		LocationManager locationManager = LocationManager.getInstance(getApplicationContext());
+		
+		locationManager.removeUpdates(this);
+
+		super.onDestroy();
+	}
+	
 	private static final List<Location> locations = new ArrayList<Location>(3);
 
 	@Override
