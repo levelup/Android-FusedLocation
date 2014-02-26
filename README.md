@@ -20,7 +20,6 @@ The rest of the LocationManager rules and permissions apply.
  * the Fused provider is used even if it doesn't match the required Criteria
  * LocationProvider mocking is not supported yet
  * the GeoFencing API is not yet un-hidden
- * 
 
 ## Sample App
 
