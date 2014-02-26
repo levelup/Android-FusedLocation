@@ -20,6 +20,13 @@ The rest of the LocationManager rules and permissions apply.
  * the Fused provider is used even if it doesn't match the required Criteria
  * LocationProvider mocking is not supported yet
  * the GeoFencing API is not yet un-hidden
+ * 
+
+## Sample App
+
+The sample app shows the value for each source, so you know the Fused provider works and where
+its data are coming from. In real life you don't target a specific provider but uses a Criteria,
+in which case the Fused provider will be favored, for better & faster results.﻿
  
 ## License
 
