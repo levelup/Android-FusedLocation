@@ -6,7 +6,7 @@ This project aims to bring the Fused location provider to android apps without r
 ## Summary
 
 The Fused location provider is integrated in the OS (needs to be enabled on the device)
-and can be used directly. The library uses it when it's available (Android 4.2+) using
+and can be used directly. This library uses it when it's available (Android 4.2+) using
 the same API as the Android LocationManager.
 
 ## Usage
@@ -21,7 +21,7 @@ The rest of the LocationManager rules and permissions apply.
  * LocationProvider mocking is not supported yet
  * the GeoFencing API is not yet un-hidden
  
- ## License
+## License
 
     Copyright 2014 LevelUp Studios
     Copyright 2007 The Android Open Source Project
