@@ -4,7 +4,7 @@ archivesBaseName = 'Android-FusedLocation'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.2'
+    buildToolsVersion '19.0.3'
 
     defaultConfig {
         minSdkVersion 9
